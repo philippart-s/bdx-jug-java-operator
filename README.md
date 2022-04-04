@@ -3,7 +3,7 @@ Source code of the talk Java Operator for JUG Bordeaux
 
 # Déroulé de la démo
 ## 🎉 Init project
- - la branche `init-project` contient le résultat de cette étape
+ - la branche `01-init-project` contient le résultat de cette étape
  - [installer / mettre](https://sdk.operatorframework.io/docs/installation/) à jour la dernière version du [Operator SDK](https://sdk.operatorframework.io/) (v1.18.1 au moment de l'écriture du readme)
  - créer le répertoire `bdx-jug-java-operator`
  - dans le répertoire `bdx-jug-java-operator`, scaffolding du projet avec Quarkus : `operator-sdk init --plugins quarkus --domain fr.wilda --project-name bdx-jug-java-operator`
