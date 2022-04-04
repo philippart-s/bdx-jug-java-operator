@@ -1,5 +1,5 @@
 # bdx-jug-java-operator
-Source code of the talk Java Operator for JUG Bordeaux
+Source code of the talk Java Operator for Bordeaux JUG
 
 # Déroulé de la démo
 ## 🎉 Init project
