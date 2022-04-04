@@ -391,6 +391,7 @@ Source code of the talk Java Operator for JUG Bordeaux
     No resources found in test-nginx-operator namespace.
     ```
  - recréer le service : `kubectl apply -f ./src/main/resources/k8s/nginx-service.yaml -n test-nginx-operator` 
+ - supprimer la CR : `kubectl delete nginxOperator/nginx-bdx-jug -n test-nginx-operator`
 
 ## 👀 Watch service deletion
  - la branche `07-watch-service-deletion` contient le résultat de cette étape
