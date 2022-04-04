@@ -526,24 +526,25 @@ Source code of the talk Java Operator for JUG Bordeaux
     bdx-jug-nginx-operator-5649886754-5lgd5   1/1     Running   0          2m15s    
 
     $ kubectl logs bdx-jug-nginx-operator-5649886754-5lgd5 -n bdx-jug-nginx-operator
-    __  ____  __  _____   ___  __ ____  ______ 
-    --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
-    -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
-    --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
-    2022-03-09 14:37:17,922 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'nginxoperatorreconciler' for resource: 'class wilda.fr.NginxOperator' for namespace(s): [all namespaces]
-    2022-03-09 14:37:17,932 INFO  [io.qua.ope.run.AppEventListener] (main) Quarkus Java Operator SDK extension 3.0.2 (commit: 6233ac1 on branch: 6233ac1e71f56d4c52072ab7d2f7cf40591b44d3) built on Mon Jan 24 08:24:35 GMT 2022
-    2022-03-09 14:37:17,932 INFO  [io.jav.ope.Operator] (main) Operator SDK 2.0.2 (commit: ba03d9e) built on Thu Jan 20 10:22:23 GMT 2022 starting...
-    2022-03-09 14:37:17,933 INFO  [io.jav.ope.Operator] (main) Client version: 5.11.2
-    2022-03-09 14:37:18,702 INFO  [io.quarkus] (main) bdx-jug-nginx 0.0.1-SNAPSHOT on JVM (powered by Quarkus 2.6.3.Final) started in 2.708s. Listening on: http://0.0.0.0:8080
-    2022-03-09 14:37:18,702 INFO  [io.quarkus] (main) Profile prod activated. 
-    2022-03-09 14:37:18,703 INFO  [io.quarkus] (main) Installed features: [cdi, kubernetes, kubernetes-client, micrometer, openshift-client, operator-sdk, smallrye-context-propagation, smallrye-health, vertx]
+     ```
+     __  ____  __  _____   ___  __ ____  ______      
+      --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+      -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+      --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+      2022-04-04 14:43:45,687 INFO  [io.jav.ope.Operator] (main) Registered reconciler: 'nginxoperatorreconciler' for resource: 'class wilda.fr.NginxOperator' for namespace(s): [all namespaces]
+      2022-04-04 14:43:45,732 INFO  [io.qua.ope.run.AppEventListener] (main) Quarkus Java Operator SDK extension 3.0.4 (commit: da80246 on branch: da80246dd6b953c245fcad5a01487db81d55a1bc) built on Wed Mar 02 22:29:51 GMT 2022
+      2022-04-04 14:43:45,732 INFO  [io.jav.ope.Operator] (main) Operator SDK 2.1.1 (commit: 817f8ca) built on Mon Feb 07 10:16:44 GMT 2022 starting...
+      2022-04-04 14:43:45,733 INFO  [io.jav.ope.Operator] (main) Client version: 5.11.2
+      2022-04-04 14:43:46,883 INFO  [io.quarkus] (main) bdx-jug-java-operator 0.0.1-SNAPSHOT on JVM (powered by Quarkus 2.7.3.Final) started in 3.734s. Listening on: http://0.0.0.0:8080
+      2022-04-04 14:43:46,883 INFO  [io.quarkus] (main) Profile prod activated. 
+      2022-04-04 14:43:46,883 INFO  [io.quarkus] (main) Installed features: [cdi, kubernetes, kubernetes-client, micrometer, openshift-client, operator-sdk, smallrye-context-propagation, smallrye-health, vertx]
     ```
 - tester l'opérateur en créant une CR: `kubectl apply -f ./src/test/resources/cr-test-nginx-operator.yaml -n test-nginx-operator`
 - puis en la supprimant: `kubectl delete nginxOperator/nginx-bdx-jug -n test-nginx-operator`
 - et constater que tout va bien:
 ```bash
-  🛠️  Create / update Nginx resource operator ! 🛠️                                  
-  ⚡ Event receive on watcher ! ⚡ ➡️ ADDED
-  💀 Delete Nginx resource operator ! 💀            
+  🛠️  Create / update Nginx resource operator ! 🛠️                                                                                   │
+  🛠️  Create / update Nginx resource operator ! 🛠️                                                                                   │
+  💀 Delete Nginx resource operator ! 💀      
 ```
 - supprimer l'opérateur si souhaité: `kubectl delete -f ./target/kubernetes/kubernetes.yml`
